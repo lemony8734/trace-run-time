@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "stack-trace": "0.0.9"
+    "log4js": "^1.1.1",
   }
 }

@@ -1,6 +1,6 @@
 'use strict'
 
-const stackTrace = require('stack-trace')
+const logger = require('log4js').getLogger("trace")
 
 module.exports = {
   trace: function* (key, func){
@@ -8,9 +8,7 @@ module.exports = {
 
     const result = yield func
 
-    const s = stackTrace.get(func)
-
-    console.log(`${s.getFunctionName()}`)
+    logger.info(`${key} runtime: ${new Date() * 1 - t} ms`)
 
     return result
   }
