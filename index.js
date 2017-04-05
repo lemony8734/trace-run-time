@@ -10,7 +10,7 @@ module.exports = {
 
     const s = stackTrace.get(func)
 
-    console.log(`${s}`)
+    console.log(`${s.getFunctionName()}`)
 
     return result
   }
